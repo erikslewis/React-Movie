@@ -62,7 +62,7 @@ Before we start building our React app, let's create a `HelloWorld` component ju
 
 ### Step 7: Connect to the Omdb Api
 
-- With the API key we're using, you don't need an API key, go ahead an look at the [documentation](http://omdbapi.com/) to determine the api's proper usage
+- With the API key we're using, you don't need an API key, go ahead an look at the [documentation](https://omdbapi.com/) to determine the api's proper usage
 - We're going to be querying the movie API based on title to return a collection of results.
 - Load in jQuery and use it to make an ajax call to the api endpoint using the user's query
 - Pass the movie data to the Results component to be displayed
