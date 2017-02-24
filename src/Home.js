@@ -1,12 +1,14 @@
+
 import React, { Component } from 'react';
-import Search from "./Search"
+import SearchContainer from "./SearchContainer"
+
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <h1>OMDB React</h1>
-        <Search />
+        <h1><a href="/">Movie Finder</a></h1>
+        <SearchContainer />
       </div>
     );
   }
