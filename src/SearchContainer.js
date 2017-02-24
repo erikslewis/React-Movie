@@ -19,6 +19,11 @@ class SearchContainer extends Component {
     })
   }
 
+  handleToggleSearch (evt) {
+   let hasSearched = !this.state.hasSearched
+   this.setState(Object.assign(this.state, {hasSearched, }))
+ }
+
   onSubmitQuery(evt){
     evt.preventDefault()
     let component = this
@@ -32,12 +37,19 @@ class SearchContainer extends Component {
   }
 
   render(){
-    if (this.state.hasSearched){
-      return (
-        <Results movies={this.state.movies} />
-        
-      )
-    } else {
+      if (this.state.hasSearched){
+        return (
+          <div>
+            <button
+              onClick={ evt => this.handleToggleSearch(evt) }
+              
+              className="btn btn-default">
+                Search Again
+            </button>
+            <Results movies={this.state.movies} />
+          </div>
+        )
+      }else {
       return  (
           <Search
           handleSearchInput={ (evt) => this.onSearchInput(evt) }
